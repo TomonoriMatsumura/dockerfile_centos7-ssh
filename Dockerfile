@@ -9,7 +9,7 @@ RUN set -x && \
     yum -y install openssh-server && \
     sed -ri 's/^#PermitRootLogin yes/PermitRootLogin yes/' /etc/ssh/sshd_config && \
     echo 'root:password' | chpasswd && \
-    ssh-keygen -t rsa -N "" -f /etc/ssh/ssh_host_rsa_key && \
+    ssh-keygen -t rsa -N "" -f /etc/ssh/ssh_host_rsa_key
 
 ENV LANG="ja_JP.UTF-8" \
     LANGUAGE="ja_JP:ja" \
